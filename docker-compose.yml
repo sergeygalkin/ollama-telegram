@@ -7,24 +7,25 @@ services:
     restart: on-failure
     env_file:
       - ./.env
-  
-  ollama-api:
-    image: ollama/ollama:latest
-    container_name: ollama-server
-    volumes:
-      - ./ollama:/root/.ollama
     
-    # Uncomment to enable NVIDIA GPU
-    # Otherwise runs on CPU only:
 
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities: [gpu]
+  # ollama-api:
+  #   image: ollama/ollama:latest
+  #   container_name: ollama-server
+  #   volumes:
+  #     - ./ollama:/root/.ollama
 
-    restart: always
-    ports:
-      - '11434:11434'
+  #   # Uncomment to enable NVIDIA GPU
+  #   # Otherwise runs on CPU only:
+
+  #   # deploy:
+  #   #   resources:
+  #   #     reservations:
+  #   #       devices:
+  #   #         - driver: nvidia
+  #   #           count: all
+  #   #           capabilities: [gpu]
+
+  #   restart: always
+  #   ports:
+  #     - '11434:11434'

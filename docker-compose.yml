@@ -7,7 +7,7 @@ services:
     restart: on-failure
     env_file:
       - ./.env
-    
+    network_mode: host
 
   # ollama-api:
   #   image: ollama/ollama:latest
